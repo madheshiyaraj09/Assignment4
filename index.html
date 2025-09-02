@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Registraion Form</title>
+    <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+    <form>
+        <h1 style="color:rgb(145, 19, 19)">Complex Registration Form</h1>
+    <table border="3" width="600" cellpadding="8"  cellspacing="5"   style="border-collapse:collapse; background-color:rgb(240, 228, 189)" >
+        <tr>
+            <th colspan="2" style="background-color: rgb(187, 179, 197);">Personal Details</th>
+        </tr>
+        <tr><td>First Name*</td>
+            <td><input type="text" name="first" required></td>
+        </tr>
+        <tr><td>Last Name*</td>
+            <td><input type="text" name="last" required></td>
+        </tr>
+        <tr><td>Email*</td>
+            <td><input type="email" name="email" required></td>
+        </tr>
+        <tr><td>phone number:</td>
+            <td><input type="text" name="phone" maxlength="10" required></td>
+        </tr>
+        <tr>
+            <th colspan="2" style="background-color: rgb(187, 179, 197);">Account Details</th>
+        </tr>
+        <tr>
+            <td>Username*</td>
+                <td><input type="text" name="uname" required></td>
+        </tr>
+        <tr>
+            <td>Password*</td>
+                <td><input type="password" name="pass" class="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9]).{8,}" title="12345R@j"></td>
+        </tr>
+        <tr>
+            <td>Confirm Password*</td>
+              <td><input type="password" name="pass" class="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9]).{8,}" title="password does'nt match"></td>
+        </tr>
+        <tr>
+            <th colspan="2" style="background-color: rgb(187, 179, 197);" >Address</th>
+        </tr>
+        <tr>
+          <td>Address line 1:</td>
+           <td><input type="text" name="add" required></td>
+        </tr>
+        <tr>
+            <td>Address line 2:</td>
+               <td><input type="text" name="add"></td>
+        </tr>
+        <tr><td>City*</td>
+           <td><input type="text" name="add" required></td>
+        </tr>
+        <tr>
+            <td> State*</td>
+              <td>  <select required>
+                    <option value="sel">...Select State..</option>
+                    <option value="Up">Uttar Pradesh</option>
+                    <option value="bihar">Bihar</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="A&N">Andman And Nicobar</option>
+                    <option value="guj">Gujrat</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Zip Code:*</td>
+              <td><input type="text" maxlength="5">
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2" style="background-color: rgb(187, 179, 197);">Preferences</th>
+        </tr>
+        <tr><td>Gender:*</td>
+         <td><input type="radio" class="gen" name="gen" value="m">Male
+            <input type="radio" class="gen" name="gen" value="F">female
+            <input type="radio" class="gen" name="gen" value="o">Other
+        </td></tr>
+        <tr><td>Subscribe Newsletter:</td>
+           <td><input type="checkbox" class='check'>
+        </td></tr>
+        <tr><td><label for="bio">Short Bio:</label></td>
+           <td><textarea id="bio" class="bio" maxlength="200" rows="5" cols="25" placeholder="Tell us About Yourself..."></textarea>
+        </td></tr>
+        <tr><td colspan="2"><input type="checkbox" required> I agree to the Terms and Conditions*</td></tr>
+        <tr ><td colspan="2">
+                <button type="submit" value="Submit" class="all" style="border-radius: 6px;">Register</button>
+                <button type="reset" value="Reset" class="all" style="border-radius: 6px;">Reset</button>
+            </td></tr>
+    </table>
+    </form>
+    <iframe srcdoc="<h2>Terms and Conditions </h2>
+        <p><b>Welcome to our registration portal By Registering,you agree to the following terms and conditions:</p>
+        <ul>
+          <li>You must provide accurate and complete information.</li>
+           <li>Your password must be kept confidential.</li>
+           <li>We reserve the right to cancel accounts that violete our policies.</li>
+           <li>All data is processed according to our privacy policy.</li>
+           <li>Use the form responsibly.</li>" style="background-color:rgb(140, 206, 184);" > </iframe>
+</body>
+</html>
